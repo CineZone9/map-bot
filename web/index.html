@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MC Explorer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="title-row">
+        <span class="logo">⛏</span>
+        <h1>MC Explorer Bot</h1>
+        <span id="conn-badge" class="badge disconnected">Offline</span>
+      </div>
+    </header>
+
+    <div class="grid">
+
+      <!-- Status Panel -->
+      <section class="panel status-panel">
+        <h2>Status</h2>
+        <div class="stat-row">
+          <span class="label">Position</span>
+          <span id="pos-display" class="value mono">— / —</span>
+        </div>
+        <div class="stat-row">
+          <span class="label">Chunks besucht</span>
+          <span id="chunk-count" class="value accent">0</span>
+        </div>
+        <div class="stat-row">
+          <span class="label">Fortschritt</span>
+          <span id="progress-pct" class="value">0%</span>
+        </div>
+        <div class="progress-bar-wrap">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+        <div class="stat-row">
+          <span class="label">Radius</span>
+          <span id="radius-display" class="value mono">—</span>
+        </div>
+      </section>
+
+      <!-- Map Panel -->
+      <section class="panel map-panel">
+        <h2>Karte</h2>
+        <div class="canvas-wrap">
+          <canvas id="map-canvas" width="400" height="400"></canvas>
+          <div id="map-tooltip" class="map-tooltip hidden"></div>
+        </div>
+        <div class="map-legend">
+          <span class="legend-item"><span class="dot visited"></span> besucht</span>
+          <span class="legend-item"><span class="dot current"></span> aktuell</span>
+          <span class="legend-item"><span class="dot unvisited"></span> unbesucht</span>
+        </div>
+        <div class="btn-row">
+          <button id="btn-png" class="btn primary">⬇ PNG downloaden</button>
+          <button id="btn-world" class="btn secondary">⬇ World-Daten (.json)</button>
+        </div>
+      </section>
+
+      <!-- Log Panel -->
+      <section class="panel log-panel">
+        <div class="log-header">
+          <h2>Log</h2>
+          <button id="btn-clear-log" class="btn small">Leeren</button>
+        </div>
+        <div id="logs"></div>
+      </section>
+
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "server": {
+    "host": "RobGie2010-sLMB.aternos.me",
+    "port": 27982,
+    "username": "ExplorerBot"
+  },
+  "exploration": {
+    "startX": 0,
+    "startZ": 0,
+    "radius": 200,
+    "step": 16,
+    "useFlight": false
+  },
+  "web": {
+    "port": 3000
+  }
+}
